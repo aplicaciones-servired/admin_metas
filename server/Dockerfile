@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
-# Instalar dependencias necesarias (Bookworm usa libaio1 sin problema)
-RUN apt-get update && apt-get install -y libaio1 && rm -rf /var/lib/apt/lists/*
+# Instalar dependencias necesarias
+RUN apt-get update && apt-get install -y libaio1t64 
 
 # Configurar Oracle Instant Client
 RUN mkdir -p /opt/oracle && \
